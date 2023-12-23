@@ -1,20 +1,26 @@
 # stratify_alpaca_buy_sell
 
 ## Installation
-*Setup Alpaca account.  Note: Start with a paper trading account.
-*Clone this repo to C: drive
-*Install Alpaca 
+Setup Alpaca account.  Note: Start with a paper trading account.
+
+Clone this repo to C: drive
+
+Install Alpaca 
 ```
 pip install alpaca-py
 ```
-#Ensure environmental variables are setup on your local machine: https://github.com/alpacahq/alpaca-trade-api-python
-*Update run_alpaca.bat to include proper paths
-*Schedule run_alpaca.bat in your task scheduler (I run it hourly)
+
+Ensure environmental variables are setup on your local machine: https://github.com/alpacahq/alpaca-trade-api-python
+
+Update run_alpaca.bat to include proper paths
+
+Schedule run_alpaca.bat in your task scheduler (I run it hourly)
 
 
 ## About Stratify Data Consulting
 
-Visit https://www.stratifydataconsulting.com/ to learn more.  
+Visit https://www.stratifydataconsulting.com/ to learn more.  Stratify Consulting attempts to track historical returns of the trading strategy here: https://www.stratifydataconsulting.com/daily_analysis.html
+
 Note: This is not investment advice.  If a user decides to use this program with real money they do so at their own risk.
 
 ## License
