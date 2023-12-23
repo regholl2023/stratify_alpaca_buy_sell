@@ -2,7 +2,6 @@
 """
 Created on Dec 21 2023
 
-@author: @stratifydataconsulting
 """
 import alpaca_trade_api as tradeapi
 import os
