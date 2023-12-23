@@ -10,7 +10,7 @@ Install Alpaca
 pip install alpaca-py
 ```
 
-Ensure environmental variables are setup on your local machine: https://github.com/alpacahq/alpaca-trade-api-python
+Ensure environmental variables are setup on your local machine.  Alpaca provides good examples and how to info: https://github.com/alpacahq/alpaca-trade-api-python
 
 Update run_alpaca.bat to include proper paths
 
