@@ -33,7 +33,7 @@ def alpaca_custom_sell_order_market(api, symbol, qty):
 
     api.submit_order(
         symbol=symbol,
-        qty=1,
+        qty=qty,
         side='sell',
         type='market',
         time_in_force='day',
@@ -60,7 +60,9 @@ for position in portfolio:
 
 #Adust this to your target percentage gain.  
 #A future update to this is to slowly sell off in 3 tranches - leaving runners to gain up to 50% or more depending on their fundamental and technical levels.
-target_pct_gain = .05
+target_pct_gain_1 = .10
+target_pct_gain_2 = .20
+target_pct_gain_3 = .40
 
 #Get recommended buys.  This can come from any buy signal provider.  
 #Stratify Consulting attempts to track historical returns of the trading strategy here: https://www.stratifydataconsulting.com/daily_analysis.html
@@ -70,9 +72,21 @@ recommendation_list = json.loads(response.text)
 
 #Execute Sell orders
 for position in portfolio:
-    if float(position.unrealized_plpc) >= target_pct_gain and position.symbol not in recommendation_list:
+    if float(position.unrealized_plpc) >= target_pct_gain_1 and position.symbol not in recommendation_list:
         try:
-            print(alpaca_custom_sell_order_limit(api, position.symbol, position.qty))
+            print(alpaca_custom_sell_order_limit(api, position.symbol, round(position.qty/3,0)))
+            print(f"success selling {position.symbol}")
+        except:
+            print(f"error selling {position.symbol}")
+    if float(position.unrealized_plpc) >= target_pct_gain_2 and position.symbol not in recommendation_list:
+        try:
+            print(alpaca_custom_sell_order_limit(api, position.symbol, round(position.qty/3,0)))
+            print(f"success selling {position.symbol}")
+        except:
+            print(f"error selling {position.symbol}")
+    if float(position.unrealized_plpc) >= target_pct_gain_3 and position.symbol not in recommendation_list:
+        try:
+            print(alpaca_custom_sell_order_limit(api, position.symbol, round(position.qty/3,0)))
             print(f"success selling {position.symbol}")
         except:
             print(f"error selling {position.symbol}")
