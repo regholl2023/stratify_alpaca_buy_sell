@@ -15,7 +15,7 @@ def alpaca_custom_sell_order_limit(api, symbol, qty):
 
     api.submit_order(
         symbol=symbol,
-        qty=1,
+        qty=qty,
         side='sell',
         type='limit',
         time_in_force='day',

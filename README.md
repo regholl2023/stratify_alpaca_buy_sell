@@ -1,5 +1,8 @@
 # stratify_alpaca_buy_sell
 
+## Overview
+This is a basic Alpaca buy and sell algorithm.  It uses buy signals from Stratify Data Consulting. It runs on a schedule (ex. Windows Task Scheduler) to automatically buy and sell 30+ stocks a day based on technical and fundamental data points.
+
 ## Installation
 Setup Alpaca account.  Note: Start with a paper trading account.
 
